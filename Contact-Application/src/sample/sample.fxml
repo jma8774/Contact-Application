@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="600.0" prefWidth="800.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <children>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <children>
+        <GridPane gridLinesVisible="true" layoutX="341.0" layoutY="-1.0" prefHeight="601.0" prefWidth="461.9999000000025" style="-fx-background-color: #474444;">
+          <children>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Last Name:" textAlignment="LEFT" textFill="WHITE" wrapText="false" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="TOP">
+              <font>
+                <Font size="12.0" />
+              </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="First Name:" textAlignment="LEFT" textFill="WHITE" wrapText="false" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Email Address:" textAlignment="LEFT" textFill="WHITE" wrapText="false" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Phone Number:" textAlignment="LEFT" textFill="WHITE" wrapText="false" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Home Address:" textAlignment="LEFT" textFill="WHITE" wrapText="false" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" graphicTextGap="4.0" prefHeight="360.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Photo:" textAlignment="CENTER" textFill="WHITE" textOverrun="ELLIPSIS" underline="false" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="TOP">
+              <font>
+                <Font size="13.0" />
+              </font>
+            </Label>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveContact" prefHeight="40.0" prefWidth="147.0" text="Save" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+            <Button fx:id="delButton" mnemonicParsing="false" onAction="#deleteContact" prefHeight="40.0" prefWidth="147.0" text="Delete" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+            <ImageView fx:id="photoView" fitHeight="360.0" fitWidth="291.000022877711" onMouseClicked="#photoAdd" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="TOP" />
+            <TextField fx:id="lastNameField" prefHeight="40.0" prefWidth="291.0" style="-fx-background-color: #474444;&#10;-fx-text-inner-color: white;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <TextField fx:id="firstNameField" prefHeight="40.0" prefWidth="291.0" style="-fx-background-color: #474444;&#10;-fx-text-inner-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="emailField" prefHeight="40.0" prefWidth="291.0" style="-fx-background-color: #474444;&#10;-fx-text-inner-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="phoneField" prefHeight="40.0" prefWidth="291.0" style="-fx-background-color: #474444;&#10;-fx-text-inner-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="addressField" prefHeight="40.0" prefWidth="291.0" style="-fx-background-color: #474444;&#10;-fx-text-inner-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="169.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="293.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="369.0" minHeight="10.0" prefHeight="334.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <ListView fx:id="contactListView" editable="true" focusTraversable="false" onMouseClicked="#displayContact" prefHeight="559.9999000000025" prefWidth="340.9998779296875" style="-fx-background-color: #676565;" visible="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addContact" prefHeight="42.0" prefWidth="341.0" text="Add" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      </children>
+    </AnchorPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
