@@ -11,12 +11,31 @@ public class Contact {
     private String phone;
     private String homeAddress;
 
-    public ImageView getPhoto() {
+    public Contact(ImageView photo, String lastName, String firstName, String email, String phone, String home) {
+    	this.photo = photo;
+    	this.lastName = lastName;
+    	this.firstName = firstName;
+    	this.email = email;
+    	this.phone = phone;
+    	this.homeAddress = home;
+    	photo.setPreserveRatio(true);
+        photo.setFitHeight(100);
+        photo.setFitWidth(150);
+    }
+    
+    public Contact() {
+    	
+	}
+
+	public ImageView getPhoto() {
         return photo;
     }
 
     public void setPhoto(ImageView photo) {
         this.photo = photo;
+        photo.setPreserveRatio(true);
+        photo.setFitHeight(100);
+        photo.setFitWidth(150);
     }
 
     public String getLastName() {

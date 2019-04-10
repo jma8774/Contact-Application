@@ -21,7 +21,7 @@
             <Label alignment="CENTER" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Email Address:" textAlignment="LEFT" textFill="WHITE" wrapText="false" GridPane.columnIndex="0" GridPane.rowIndex="3" />
             <Label alignment="CENTER" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Phone Number:" textAlignment="LEFT" textFill="WHITE" wrapText="false" GridPane.columnIndex="0" GridPane.rowIndex="4" />
             <Label alignment="CENTER" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Home Address:" textAlignment="LEFT" textFill="WHITE" wrapText="false" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-            <Label alignment="CENTER" graphicTextGap="4.0" prefHeight="360.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Photo:" textAlignment="CENTER" textFill="WHITE" textOverrun="ELLIPSIS" underline="false" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="TOP">
+            <Label alignment="CENTER" graphicTextGap="4.0" prefHeight="360.0" prefWidth="168.0" style="-fx-background-color: #2b2727;" text="Photo (Click to add image from PC:" textAlignment="CENTER" textFill="WHITE" textOverrun="ELLIPSIS" underline="false" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="TOP">
               <font>
                 <Font size="13.0" />
               </font>
@@ -49,8 +49,8 @@
             <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
           </rowConstraints>
         </GridPane>
-        <ListView fx:id="contactListView" editable="true" focusTraversable="false" onMouseClicked="#displayContact" prefHeight="559.9999000000025" prefWidth="340.9998779296875" style="-fx-background-color: #676565;" visible="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addContact" prefHeight="42.0" prefWidth="341.0" text="Add" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+        <ListView fx:id="contactListView" editable="true" focusTraversable="false" onMouseClicked="#displayContact" prefHeight="559.9999000000025" prefWidth="340.9998779296875" style="-fx-background-color: #676565;" visible="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addContact" prefHeight="42.0" prefWidth="341.0" text="Add a new contact" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
       </children>
     </AnchorPane>
   </children>
